@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Dojo Hello Tutotrial
+		</title>
+		<!-- load Dojo -->
+		<!-- load Dojo via Google CDN  or adjust the url to the location of downloaded Dojo release on own server-->
+		<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js">
+		</script>	
+		<script>	
+			dojo.require("dojo.fx");
+			dojo.ready(
+							function()
+								{
+									dojo.byId("greeting").innerHTML += ", from "+dojo.version;
+									dojo.fx.slideTo({top:100, left:200, node:dojo.byId("greeting")}).play();
+								}
+							);
+		</script>	
+	</head>
+	<body>
+		<h1 id="greeting">
+			Hello
+		</h1>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>Title of the document</title>
+	</head>
+
+	<body>
+		Content of the document......
+	</body>
+
+</html>
+
+<!--
+	new features in HTML5:
+- The <canvas> element for 2D drawing
+- The <video> and <audio> elements for media playback
+- Support for local storage
+- New content-specific elements, like <article>, <footer>, <header>, <nav>, <section>
+- New form controls, like calendar, date, time, email, url, search
+-->
