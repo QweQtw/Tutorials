@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Ajax Examlple</title>
+    <script>
+        function loadXMLDoc() {
+            alert("Komunikacja z serwerem via ajax");
+            var xmlHttp;
+            if (window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest();
+            }
+            else {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlHttp.onreadystatechange = function () {
+                alert("odp: " +xmlHttp.status+", "+ xmlHttp.responseTex);
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    document.getElementById("div_001").innerHTML = xmlHttp.responseText;
+            }
+            xmlHttp.open("GET", "http://localhost:8080/HelloWorld/Hello.do?imie=QweQ", true);
+            xmlHttp.send();
+        }
+    </script>
+</head>
+<body>
+    <div><p>You Have to get HelloWorld servlet on http server</p></div>
+    <div><br></div>
+    <div id="div_001"><h2>Data from Server...</h2></div>
+    <button type="button" onclick="loadXMLDoc()">Get Data</button>
+</body>
+</html>
