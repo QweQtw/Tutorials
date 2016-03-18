@@ -19,7 +19,7 @@
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
                     document.getElementById("div_001").innerHTML = xmlHttp.responseText;
             }
-            xmlHttp.open("GET", "http://localhost:8080/HelloWorld/Hello.do?imie=QweQ", true);
+            xmlHttp.open("GET", "http://127.0.0.1:8080/HelloWorld/Hello.do?imie=QweQ", true);
             xmlHttp.send();
         }
     </script>
